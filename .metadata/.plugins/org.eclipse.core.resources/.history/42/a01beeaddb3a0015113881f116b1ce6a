@@ -1,0 +1,5 @@
+package com.hibernate.sms;
+import org.hibernate.*;
+public class HibernateUtil {
+
+}

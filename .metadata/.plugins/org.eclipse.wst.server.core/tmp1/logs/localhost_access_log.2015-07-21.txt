@@ -1,0 +1,8 @@
+127.0.0.1 - - [21/Jul/2015:12:22:05 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [21/Jul/2015:12:22:06 -0400] "GET /Hibernate/WEB-INF/classes/ManageEmployee.java HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [21/Jul/2015:12:24:14 -0400] "GET /Hibernate/WEB-INF/classes/ManageEmployee.java HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [21/Jul/2015:12:24:15 -0400] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [21/Jul/2015:12:27:55 -0400] "GET /Hibernate/WEB-INF/classes/ManageEmployee.java HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [21/Jul/2015:12:28:00 -0400] "GET /Hibernate/WEB-INF/classes/ManageEmployee.java HTTP/1.1" 404 992
+127.0.0.1 - - [21/Jul/2015:12:30:23 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [21/Jul/2015:12:30:23 -0400] "GET /Hibernate/WEB-INF/classes/ManageEmployee.java HTTP/1.1" 404 992

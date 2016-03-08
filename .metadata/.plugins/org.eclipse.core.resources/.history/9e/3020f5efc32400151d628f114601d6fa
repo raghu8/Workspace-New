@@ -1,0 +1,5 @@
+package com.raghu.model;
+
+public class User {
+
+}

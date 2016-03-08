@@ -1,0 +1,46 @@
+package com.hibernate.sms;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Address")
+public class Address{
+	
+	@Id
+	@GeneratedValue
+	@Column(name="AddressID")
+	private int AddressID;
+	
+	@ManyToOne
+	@JoinColumn(name="AddressTypeID")
+	private String AddressTypeID;
+	
+	@Column(name="AddressLine1")
+	private String AddressLine1;
+	
+	@Column(name="AddressLine2")
+	private String AddressLine2;
+	
+	@Column(name="City")
+	private String City;
+	
+	@Column(name="State")
+	private String State;
+	
+	@Column(name="PostalCode")
+	private String PostalCode;
+	
+	@ManyToOne
+	@JoinColumn(name="BusinessEntityID")
+	private int BusinessEntityID;
+	
+	public Address(){}
+}

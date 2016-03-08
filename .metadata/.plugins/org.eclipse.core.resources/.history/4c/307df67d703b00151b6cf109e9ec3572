@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hibernate.sms">
+
+	<class name="Address" table="Address">
+		<id name="AddressID" column="AddressID">
+			<generator class="native" />
+		</id>
+		<property name="AddressLine1"/>
+		<property name="AddressLine2"/>
+		<property name="City"/>
+		<property name="State"/>
+	</class>

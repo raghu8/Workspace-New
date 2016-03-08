@@ -1,0 +1,20 @@
+import java.awt.Desktop;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.BufferedReader;
+
+import javax.imageio.*;
+
+public class Image {
+
+	public static void main(String[] args) throws IOException {
+		System.out.println("Opening a JPEG file:");
+		File f = new File("C:/Users/Raghu/Pictures/flowers.jpg");
+		Desktop dt = Desktop.getDesktop();
+		dt.open(f);
+		
+	}
+}
+// isolation level
+// object lvl locking

@@ -1,0 +1,130 @@
+package com.hibernate.sms;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Address")
+public class Address {
+
+	@Id
+	@GeneratedValue
+	@Column(name = "AddressID")
+	private int AddressID;
+
+	@ManyToOne
+	@JoinColumn(name = "AddressTypeID")
+	private static int AddressTypeID;
+
+	@Column(name = "AddressLine1")
+	private String AddressLine1;
+
+	@Column(name = "AddressLine2")
+	private String AddressLine2;
+
+	@Column(name = "City")
+	private String City;
+
+	@Column(name = "State")
+	private String State;
+
+	@Column(name = "PostalCode")
+	private String PostalCode;
+
+	@ManyToOne
+	@JoinColumn(name = "BusinessEntityID")
+	private int BusinessEntityID;
+
+	public Address() {
+	}
+
+	public Address(int AddressID, int AddressTypeID, String AddressLine1,
+			String AddressLine2, String City, String State, String PostalCode,
+			int BuisnessEntityID) {
+		this.AddressID = AddressID;
+		this.AddressTypeID = AddressTypeID;
+		this.AddressLine1 = AddressLine1;
+		this.AddressLine2 = AddressLine2;
+		this.City = City;
+		this.State = State;
+		this.PostalCode = PostalCode;
+		this.BusinessEntityID = BusinessEntityID;
+	}
+
+	public int getAddressID() {
+		return AddressID;
+	}
+
+	public static void setAddressID(int AddressID) {
+		AddressID = AddressID;
+	}
+
+	public int getAddressTypeID() {
+		return AddressTypeID;
+	}
+
+	public static void setAddressTypeID(int addressTypeID) {
+		AddressTypeID = addressTypeID;
+	}
+
+	public String getAddressLine1() {
+		return AddressLine1;
+	}
+
+	public static void setAddressLine1(String addressLine1) {
+		AddressLine1 = addressLine1;
+	}
+
+	public String getAddressLine2() {
+		return AddressLine2;
+	}
+
+	public void setAddressLine2(String addressLine2) {
+		AddressLine2 = addressLine2;
+	}
+
+	public String getCity() {
+		return City;
+	}
+
+	public void setCity(String city) {
+		City = city;
+	}
+
+	public String getState() {
+		return State;
+	}
+
+	public void setState(String state) {
+		State = state;
+	}
+
+	public String getPostalCode() {
+		return PostalCode;
+	}
+
+	public void setPostalCode(String postalCode) {
+		PostalCode = postalCode;
+	}
+
+	public int getBusinessEntityID() {
+		return BusinessEntityID;
+	}
+
+	public void setBusinessEntityID(int businessEntityID) {
+		BusinessEntityID = businessEntityID;
+	}
+
+	public static void setAddressID() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

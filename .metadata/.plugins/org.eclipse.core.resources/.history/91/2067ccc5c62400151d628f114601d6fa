@@ -1,0 +1,8 @@
+package db.properties;
+
+public class dontknow {
+	driver=com.mysql.jdbc.Driver
+			url=jdbc:mysql://localhost:3306/UserDB
+			user=admin
+			password=test
+}

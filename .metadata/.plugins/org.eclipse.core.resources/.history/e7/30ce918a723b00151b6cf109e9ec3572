@@ -1,0 +1,52 @@
+package com.hibernate.sms;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "AddressTypeID")
+public class AddressType {
+
+	@Id
+	@GeneratedValue
+	@Column(name = "AddressTypeID")
+	private int AddressTypeID;
+
+	@Column(name = "Name")
+	private String Name;
+
+	@OneToMany(mappedBy = "AdressType")
+	private Set<Address> address;
+
+	public int getAddressTypeID() {
+		return AddressTypeID;
+	}
+
+	public static void setAddressTypeID(int AddressTypeID) {
+		AddressTypeID = AddressTypeID;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public static void setName(String Name) {
+		Name = Name;
+	}
+
+	public Set<Address> getAddress() {
+		return address;
+	}
+
+	public void setAddress(Set<Address> address) {
+		this.address = address;
+	}
+
+}

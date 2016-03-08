@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+externalMigrateFromAuthorizationDatabase/isMigrated=true
+migrateFromAuthorizationDatabase/isMigrated=true
+repositories/4028a1aba91e00151d9dba8e8ebfecb4=4028a1aba91e00151d9dba8e8ebfecb4;https\://192.168.1.116\:9443/svn/SMS;https\://192.168.1.116\:9443/svn/SMS;branches;tags;trunk;true;dada1d16-cec7-9e4d-b380-59964efd07fa;https\://192.168.1.116\:9443/svn/SMS;;false;;;0
+repositories/d03cafeba71e00151922e30440354859=d03cafeba71e00151922e30440354859;http\://192.168.1.16;http\://192.168.1.16;branches;tags;trunk;true;;;;false;;;0
+synch_info/contigous=true

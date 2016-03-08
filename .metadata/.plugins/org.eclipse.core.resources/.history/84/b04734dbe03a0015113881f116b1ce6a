@@ -1,0 +1,27 @@
+package com.hibernate.sms;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class Main {
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		  SessionFactory sf = HibernateUtil.getSessionFactory();
+	        Session session = sf.openSession();
+	        session.beginTransaction();
+	        
+	        AddressType addresstype= new AddressType();
+	        AddressType.setAddressTypeID(1);
+	        AddressType.setName("Raghu");
+	        
+	        Address address = new Address();
+	        Address.setAddressID(2);
+	        Address.setAddressTypeID(11);
+	        Address.setAddressLine1("firstline");
+	        Address.setAddressLine2("secondline");
+	        Address.setCity("city");
+	        Address.setState("state");
+	        Address.setPostalCode("1234");
+	        Address.setBusinessEntityID(123);
+	}
+}

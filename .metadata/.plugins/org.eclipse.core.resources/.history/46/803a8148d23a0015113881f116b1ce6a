@@ -1,0 +1,26 @@
+package com.hibernate.sms;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Address")
+public class Address {
+	private int AddressID;
+	private int AddressTypeID;
+	private String AddressLine1;
+	private String Addressline2;
+	private String City;
+	private String State;
+	private String PostalCode;
+	private int BusinessEntityID;
+	
+	private Set<AddressType> address;
+}

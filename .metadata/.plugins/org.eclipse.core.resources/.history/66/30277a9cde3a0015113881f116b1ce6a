@@ -1,0 +1,18 @@
+package com.hibernate.sms;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class Main {
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		  SessionFactory sf = HibernateUtil.getSessionFactory();
+	        Session session = sf.openSession();
+	        session.beginTransaction();
+	        
+	        AddressType addresstype= new AddressType();
+	        AddressType.setAddressTypeID(1);
+	        
+	        Address add1= new Address();
+	}
+}

@@ -1,0 +1,71 @@
+import java.sql.*;
+import java.util.UUID;
+
+public class guid {
+
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static final String DB_URL = "jdbc:mysql://192.168.1.116:3306/sms";
+
+	// Database credentials
+	static final String USER = "devuser";
+	static final String PASS = "devuser";
+
+	public static void main(String[] args) {
+
+		Connection conn = null;
+		Statement stmt = null;
+
+		try {
+
+			String vin = UUID.randomUUID().toString();
+			// STEP 2: Register JDBC driver
+			Class.forName("com.mysql.jdbc.Driver");
+			// STEP 3: Open a connection
+			System.out.println("Connecting to a selected database...");
+			conn = DriverManager
+					.getConnection("jdbc:mysql://192.168.1.116:3306/sms",
+							"devuser", "devuser");
+			System.out.println("Connected database successfully...");
+String carmake="HONDA";
+String carmodel="CRV";
+			// STEP 4: Execute a query
+			System.out.println("Inserting records into the table...");
+			PreparedStatement statement = conn.prepareStatement("INSERT INTO testingtable(carmake,carmodel,vin)"+" values (?, ?, ?)");
+			 PreparedStatement.setString(1,carmake );
+			   PreparedStatement.setString(2, carmodel);   
+			   PreparedStatement.setString(3, vin);
+			/*
+			 * stmt = conn.createStatement();
+			 * 
+			 * String sql = "INSERT INTO testingtable " +
+			 * "VALUES ( 'Zara', 'Ali',90)"; stmt.executeUpdate(sql); sql =
+			 * "INSERT INTO testingtable " + "VALUES ( 'Mahnaz', 'Fatma',56)";
+			 * stmt.executeUpdate(sql); sql = "INSERT INTO testingtable " +
+			 * "VALUES ( 'Zaid', 'Khan', 89)"; stmt.executeUpdate(sql); sql =
+			 * "INSERT INTO testingtable " + "VALUES('Sumit', 'Mittal', 78)";
+			 * stmt.executeUpdate(sql);
+			 */
+			System.out.println("Inserted records into the table...");
+		} catch (SQLException se) {
+			// Handle errors for JDBC
+			se.printStackTrace();
+		} catch (Exception e) {
+			// Handle errors for Class.forName
+			e.printStackTrace();
+		} finally {
+			// finally block used to close resources
+			try {
+				if (stmt != null)
+					conn.close();
+			} catch (SQLException se) {
+			}// do nothing
+			try {
+				if (conn != null)
+					conn.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			}// end finally try
+		}// end try
+		System.out.println("Goodbye!");
+	}// end main
+}// end JDBCExample

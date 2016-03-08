@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="sms">
+<head>
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+<div class="container">
+<body  ng-controller="mysms as vm">
+
+
+  <table class="table table-bordered">
+  <table class="table table-hover">
+  
+ 
+   <tr>
+    <th>logo</th>
+    <th>vendor</th>
+    <th>location</th>
+    <th>H1receipt</th>
+    <th>percentage</th>
+
+  </tr>
+    <tr data-ng-repeat="x in vm.names">
+
+
+
+     
+
+     <td ><img src="{{x.logo}}" width="100" height="100"> </td>
+
+     <td> {{x.vendor}}</td>
+     <td> {{x.location}}</td>
+     <td> {{x.H1receipt}}</td>
+     <td> {{(x.percentage+'%') }}</td>
+
+    </tr>
+</table>
+  </table>
+ 
+
+<script>
+var app = angular.module('sms', []);
+
+
+app.controller('mysms', function() {
+  
+  
+  this.names=[
+
+    {logo:'images/r2logo.jpg',vendor:'R2technologies',location:'Michigan',H1receipt:24,percentage:56},
+      {logo:'images/141_1.jpg',vendor:'Petadigit',location:'Atlanta',H1receipt:24,percentage:56},
+      {logo:'images/ibm.jpg',vendor:'IBM',location:'Texas',H1receipt:24,percentage:56}
+    
+
+    ] ; 
+});
+</script>
+</div>
+</body>
+</html>
+
+

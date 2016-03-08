@@ -1,0 +1,82 @@
+package com.hibernate.sms;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "BusinessEntity")
+public class BusinessEntity {
+	@Id
+	@GeneratedValue
+	@Column(name = "BusinessEntityID")
+	private int BusinessEntityID;
+	@Column(name = "BusinessEntityName")
+	private String BusinessEntityName;
+	@ManyToOne
+	@JoinColumn(name = "AddressID")
+	private int AddressID;
+	@ManyToOne
+	@JoinColumn(name = "PhoneID")
+	private int PhoneID;
+
+	private BusinessEntity bentity;
+
+	public BusinessEntity() {
+	}
+
+	public BusinessEntity(int BusinessEntityID, String BusinessEntityName,
+			int AddressID, int PhoneID) {
+		this.BusinessEntityID = BusinessEntityID;
+		this.BusinessEntityName = BusinessEntityName;
+		this.PhoneID = PhoneID;
+		this.AddressID = AddressID;
+	}
+
+	public int getBusinessEntityID() {
+		return BusinessEntityID;
+	}
+
+	public static void setBusinessEntityID(int BusinessEntityID) {
+		BusinessEntityID = BusinessEntityID;
+	}
+
+	public String getBusinessEntityName() {
+		return BusinessEntityName;
+	}
+
+	public void setBusinessEntityName(String BusinessEntityName) {
+		BusinessEntityName = BusinessEntityName;
+	}
+
+	public int getAddressID() {
+		return AddressID;
+	}
+
+	public void setAddressID(int addressID) {
+		AddressID = addressID;
+	}
+
+	public int getPhoneID() {
+		return PhoneID;
+	}
+
+	public void setPhoneID(int phoneID) {
+		PhoneID = phoneID;
+	}
+
+	public BusinessEntity getBentity() {
+		return bentity;
+	}
+
+	public void setBentity(BusinessEntity bentity) {
+		this.bentity = bentity;
+	}
+	
+}

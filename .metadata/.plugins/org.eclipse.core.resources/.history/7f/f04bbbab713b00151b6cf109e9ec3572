@@ -1,0 +1,6 @@
+package com.hibernate.sms;
+
+public class BusinessEntity {
+	private int BusinessEntityID;
+	private String  BusinessEntityName;
+}

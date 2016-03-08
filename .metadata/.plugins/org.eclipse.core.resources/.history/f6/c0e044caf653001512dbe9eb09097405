@@ -1,0 +1,9 @@
+import java.util.Scanner;
+
+public class Fibonacci_sequence {
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Enter number");
+	//Fibonacci sequence formula
+	}
+}
